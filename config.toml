@@ -30,7 +30,7 @@ enableRobotsTXT = true
   """
 [params.meta]
   description = "Julien Mousqueton - Chief Technoglist Officer Cyber Security."
-  keywords = "CTO, Ransomware, cybersecurity, malware, SOC, CyberSOC, CERT, CSIRT, infrastructure, hacker, engineer, architect"
+  keywords = "CTO, Ransomware, Julien, Mousqueton, Julien Mousqueton, Computacenter, cybersecurity, malware, SOC, CyberSOC, CERT, CSIRT, infrastructure, hacker, engineer, architect"
   images = [
     "/images/profile.jpg"
   ]
