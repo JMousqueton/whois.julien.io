@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>whois Julien Mousqueton</h1>
+  <h1>Who is Julien Mousqueton ? </h1>
 </div>
 
 <p align="center">
@@ -19,7 +19,6 @@
 </div>
 
 <br />
-
 
 ## Author
 
