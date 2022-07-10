@@ -1,22 +1,32 @@
-name: Generate pages 
-on: 
- workflow_dispatch:
+name: github pages
+
+on:
+  push:
+    branches:
+      - main  # Set a branch to deploy
+  pull_request:
+
 jobs:
-  build:
-    docker:
-    - image: cibuilds/hugo:latest
+  deploy:
+    runs-on: ubuntu-20.04
     steps:
-    - checkout
-    - run:
-        name: "Install Submodules"
-        command: git submodule sync && git submodule update --init
-    - run:
-        name: "Build Static Site with Hugo"
-        command: hugo --buildDrafts -v
-        environment:
-          HUGO_ENABLEGITINFO: "true"
-    - run:
-        name: "Test with HTML Proofer"
-        command: htmlproofer public --allow-hash-href --check-html --empty-alt-ignore --disable-external
-    - store_artifacts:
-        path: public/
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Build
+        run: hugo --minify --enableGitInfo --disableKinds=sitemap,taxonomy,term
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
