@@ -48,7 +48,7 @@ enableRobotsTXT = true
   # quora = "posquit0"
   # dribbble = "posquit0"
   # behance = "posquit0"
-  address = "https://add.julienmousqueton.fr"
+  address = "add.julienmousqueton.fr"
 
 ## Footer Configurations
 [params.footer]
