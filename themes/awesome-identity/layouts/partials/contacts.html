@@ -57,6 +57,10 @@
   <a class="contact" href="https://bitbucket.org/{{ $id }}">
     <i class="fab fa-bitbucket" aria-hidden="true"></i>
   </a>
+  {{- else if (eq $service "mastodon") }}
+  <a class="contact" href="{{ $id }}">
+    <i class="fab fa-mastodon" aria-hidden="true"></i>
+  </a>
   {{- else if (eq $service "vcard") }}
   <a class="contact" href="https://{{ $id }}">
     <i class="fas fa-id-badge" aria-hidden="true"></i>

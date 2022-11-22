@@ -41,6 +41,7 @@ enableRobotsTXT = true
   twitter = "jmousqueton"
   linkedin = "julienmousqueton"
   keybase = "jmousqueton"
+  mastodon = "https://infosec.exchange/@JMousqueton"
   # facebook = "posquit0"
   # stackoverflow = "7919458"
   # instagram = "posquit0.bj"
