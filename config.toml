@@ -53,7 +53,7 @@ enableRobotsTXT = true
 
 ## Footer Configurations
 [params.footer]
-  copyright = "© 2019-2022 Julien Mousqueton[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
+  copyright = "© 2019-2023 Julien Mousqueton[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
   poweredBy = false
 
 [params.crisp]
